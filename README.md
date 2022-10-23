@@ -1,6 +1,6 @@
 # DISCORD TEMPLATE
 
-New Discord Template to Create a Bot in JS !
+New discord template to create a bot in JS !
 
 ## Installation
 
@@ -17,8 +17,14 @@ complete the .env file
 #Token of Your Bot
 TOKEN="YOUR TOKEN"
 
-#Activities
+## Activities
 ACTIVITIES=SERVERSCOUNT,MEMBERSCOUNT,Love 💕
+```
+
+## Startup
+Use this command in your terminal to  start your bot.
+```env
+node .
 ```
 
 ## Contributing
