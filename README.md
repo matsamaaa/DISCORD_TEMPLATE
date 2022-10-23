@@ -15,9 +15,12 @@ node install --save dotenv
 complete the .env file
 ```env
 #Token of Your Bot
-TOKEN="YOUR TOKEN"
+TOKEN="YOUR BOT TOKEN"
 
-## Activities
+#Guild ID
+GUILD_ID="YOUR DEVELOPMENT GUILD ID"
+
+#Activities
 ACTIVITIES=SERVERSCOUNT,MEMBERSCOUNT,Love 💕
 ```
 
