@@ -11,13 +11,14 @@ module.exports = {
         for(const folder of commandsFolder) {
             fs.readdirSync(`./commands/${folder}`).filter(file => file.endsWith('.js')).forEach(file => {
                 const command = require(`../commands/${folder}/${file}`)
+                console.log(file)
                 commandsListe.push(command.data)
             })
         }
 
         //Setup Commands
         client.application.commands.set(commandsListe.map(cmd => cmd))
-        client.guilds.cache.get('853017018541277185').commands.set(commandsListe.map(cmd => cmd))
+        client.guilds.cache.get(process.env.GUILD_ID).commands.set(commandsListe.map(cmd => cmd))
 
         //Log Connexion
         console.log('\033[0m[\033[0;32m✔\033[0m] ' + `${client.user.username} is now Online !`);
