@@ -1,3 +1,4 @@
+![Discord Bot Template](https://github.com/matsamaaa/DISCORD_TEMPLATE/blob/main/banner.png?raw=true)
 # DISCORD TEMPLATE
 
 New discord template to create a bot in JS !
