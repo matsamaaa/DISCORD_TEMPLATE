@@ -1,4 +1,5 @@
 <img src="https://github.com/matsamaaa/DISCORD_TEMPLATE/blob/main/banner.png?raw=true" alt="Discord Bot Template" width="100%">
+
 # DISCORD TEMPLATE
 
 New discord template to create a bot in JS !
