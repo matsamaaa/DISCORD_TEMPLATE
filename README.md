@@ -1,4 +1,4 @@
-<img src="https://github.com/matsamaaa/DISCORD_TEMPLATE/blob/main/banner.png?raw=true" alt="Discord Bot Template" width="100%">
+<img src="https://github.com/matsamaaa/DISCORD_TEMPLATE/blob/main/assets/banner.png?raw=true" alt="Discord Bot Template" width="100%">
 
 # DISCORD TEMPLATE
 
@@ -10,6 +10,7 @@ Use [nodeJS](https://nodejs.org/en/) to install packages.
 
 ```bash
 node install --save discord.js
+node install --save dateformat
 node install --save dotenv
 ```
 

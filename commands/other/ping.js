@@ -1,16 +1,28 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const { ErrorCommand } = require('../../utils/errors');
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('ping')
 		.setDescription('Replies pong !'),
-	execute(interaction) {
+        options: {
+            dm: false,
+            nsfw: false,
+            permissions: {
+                user: null,
+                bot: null
+            },
+            maintenance: false,
+        },
+	execute(interaction, client) {
 
-		try {
+        try {
+
 			return interaction.reply('pong !')
-		} catch(error) {
-			console.log('\033[0m[\033[0;31m!\033[0m] ' + `An Error has occured in Ping Command !`);
-		}
+
+        } catch (err) {
+            ErrorCommand('test', err);
+        }
 
 	},
 };

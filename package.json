@@ -1,6 +1,6 @@
 {
   "name": "DISCORD_TEMPLATE",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Template Bot",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "mat_sama",
   "license": "MIT",
   "dependencies": {
+    "dateformat": "^5.0.3",
     "discord.js": "^14.6.0",
     "dotenv": "^16.0.3"
   }
