@@ -25,8 +25,8 @@ function ErrorMessage(interaction, Error, EditReply) {
     }
 }
 
-function ErrorDmMessage(client, interaction, error) {
-    const member = client.guilds.cache.get(process.env.GUILD_ID).members.cache.get(interaction.user.id);
+function ErrorDmMessage(interaction, error) {
+    const member = interaction.guild.members.cache.get(interaction.user.id);
     return member.send({ content: error })
 }
 

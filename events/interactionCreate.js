@@ -22,21 +22,28 @@ module.exports = {
     
                         const options = command.options;
                         const permissions = options.permissions;
-                        const guild = client.guilds.cache.get(process.env.GUILD_ID);
+                        const guild = interaction.guild;
     
                         //check maintenance
-                        if(options.maintenance && !member.permissions.has(PermissionsBitField.Flags.Administrator)) return ErrorMessage(interaction, `Cette commande est en maintenance`);
+                        if(options.maintenance) {
+                            const staff = (process.env.STAFF).split(',');
+                            let pass = false;
+                            for(const user of staff) {
+                                if(user === member.id) pass = true;
+                            }
+                            if(!pass) return ErrorMessage(interaction, `This command is in Maintenance`);
+                        } 
     
                         //check permissions
-                        if(permissions.user != null && !member.permissions.has(permissions.user)) return ErrorMessage(interaction, `Tu n'as pas la permission nécéssaire`);
-                        if(permissions.bot != null && !guild.members.cache.get(process.env.CLIENT_ID).permissions.has(permissions.user)) return ErrorMessage(interaction, `Le bot n'a permission nécéssaire`);
+                        if(permissions.user != null && !member.permissions.has(permissions.user)) return ErrorMessage(interaction, `You don't have the permission`);
+                        if(permissions.bot != null && !guild.members.cache.get(process.env.BOT_ID).permissions.has(permissions.user)) return ErrorMessage(interaction, `The bot does not have the permission`);
     
                         //check si l'utilisateur est plus haut gradé
     
                         //check mp
-                        //if(member === null && options.dm === false) return ErrorDmMessage(client, interaction)
+                        //if(member === null && options.dm === false) return ErrorDmMessage(interaction)
     
-                    client.commands.get(commandName).execute(interaction, con, client);
+                    client.commands.get(commandName).execute(interaction, client);
     
                 }
 

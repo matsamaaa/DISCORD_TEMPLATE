@@ -2,7 +2,7 @@
 
 # DISCORD TEMPLATE
 
-New discord template to create a bot in JS !
+New discord template to create a bot in JS for discord V14+ !
 
 ## Installation
 
