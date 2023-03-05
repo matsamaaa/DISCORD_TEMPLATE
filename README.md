@@ -10,7 +10,6 @@ Use [nodeJS](https://nodejs.org/en/) to install packages.
 
 ```bash
 node install --save discord.js
-node install --save dateformat
 node install --save dotenv
 ```
 

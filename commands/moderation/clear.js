@@ -2,7 +2,6 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { PermissionsBitField } = require('discord.js');
 const { ErrorCommand } = require('../../utils/errors');
 const { CreateEmbed } = require('../../utils/embed');
-dateFormat = require('dateformat');
 
 module.exports = {
 	data: new SlashCommandBuilder()

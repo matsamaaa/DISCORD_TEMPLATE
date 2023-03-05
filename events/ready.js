@@ -1,5 +1,6 @@
 const { ActivityType } = require('discord.js');
 const fs = require('fs');
+const { SimpleConsole } = require('../utils/errors');
 
 module.exports = {
     name: 'ready',
@@ -18,6 +19,7 @@ module.exports = {
 
         //Setup Commands
         client.application.commands.set(commandsListe.map(cmd => cmd))
+        client.guilds.cache.get(process.env.GUILD_ID).commands.set(commandsListe.map(cmd => cmd))
 
         //Log Connexion
         console.log('\033[0m[\033[0;32m✔\033[0m] ' + `${client.user.username} is now Online !`);
